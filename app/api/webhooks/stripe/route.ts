@@ -4,10 +4,7 @@ import { prisma } from "@/lib/prisma";
 import { activateMembership, cancelMembership } from "@/lib/activate-membership";
 import Stripe from "stripe";
 
-// Required: disable Next.js body parsing so Stripe can verify the raw body
-export const config = {
-  api: { bodyParser: false },
-};
+
 
 export async function POST(req: NextRequest) {
   const rawBody = await req.text();
