@@ -20,29 +20,37 @@ export default function SignupPage() {
     setError("");
     setLoading(true);
 
-    const result = await signupAction(email, password, displayName);
+    try {
+      const result = await signupAction(email, password, displayName);
 
-    setLoading(false);
-
-    if (!result.success) {
-      setError(result.error);
+      if (!result.success) {
+        setError(result.error);
+        setLoading(false);
+        return;
+      }
+    } catch {
+      setError("Something went wrong. Please try again.");
+      setLoading(false);
       return;
     }
 
     // Auto-login after signup, then go straight to membership setup
-    const res = await signIn("credentials", {
-      email,
-      password,
-      redirect: false,
-    });
+    try {
+      const res = await signIn("credentials", {
+        email,
+        password,
+        redirect: false,
+      });
 
-    if (res?.error) {
-      // Account created but login failed — fall back to login page
+      if (res?.error) {
+        router.push("/login");
+        return;
+      }
+
+      router.push("/start-membership");
+    } catch {
       router.push("/login");
-      return;
     }
-
-    router.push("/start-membership");
   }
 
   return (
