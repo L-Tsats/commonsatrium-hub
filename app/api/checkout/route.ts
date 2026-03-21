@@ -49,22 +49,32 @@ export async function POST() {
     });
   }
 
+  const priceId = process.env.STRIPE_PRICE_ID;
+  if (!priceId) {
+    return NextResponse.json({ error: "Stripe price not configured" }, { status: 500 });
+  }
+
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? "http://localhost:3000";
 
   // Create Stripe Checkout Session
-  const checkoutSession = await stripe.checkout.sessions.create({
-    customer: stripeCustomerId,
-    mode: "subscription",
-    line_items: [
-      {
-        price: process.env.STRIPE_PRICE_ID!,
-        quantity: 1,
-      },
-    ],
-    success_url: `${baseUrl}/membership/success?session_id={CHECKOUT_SESSION_ID}`,
-    cancel_url: `${baseUrl}/start-membership`,
-    metadata: { userId: String(userId) },
-  });
+  try {
+    const checkoutSession = await stripe.checkout.sessions.create({
+      customer: stripeCustomerId,
+      mode: "subscription",
+      line_items: [
+        {
+          price: priceId,
+          quantity: 1,
+        },
+      ],
+      success_url: `${baseUrl}/membership/success?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${baseUrl}/start-membership`,
+      metadata: { userId: String(userId) },
+    });
 
-  return NextResponse.json({ url: checkoutSession.url });
+    return NextResponse.json({ url: checkoutSession.url });
+  } catch (err: unknown) {
+    const message = err instanceof Error ? err.message : "Checkout failed";
+    return NextResponse.json({ error: message }, { status: 500 });
+  }
 }

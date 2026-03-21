@@ -58,7 +58,7 @@ export default async function ToolsPage() {
               Tool Access Hub
             </p>
             <h1 className="text-3xl font-semibold">Tools</h1>
-            <p className="leading-7 text-gray-900">
+            <p className="leading-7 text-black">
               Ecosystem tools available through your account. Core experiences live
               in the mobile app. Browser tools connect through your access key.
             </p>
@@ -75,18 +75,18 @@ export default async function ToolsPage() {
                 <div className="max-w-2xl space-y-3">
                   <div className="flex flex-wrap items-center gap-3">
                     <h2 className="text-2xl font-semibold">{tool.name}</h2>
-                    <span className="rounded-full border border-gray-300 px-3 py-1 text-xs font-medium text-gray-900">
+                    <span className="rounded-full border border-gray-300 px-3 py-1 text-xs font-medium text-black">
                       {tool.platform}
                     </span>
                   </div>
-                  <p className="leading-7 text-gray-900">{tool.description}</p>
+                  <p className="leading-7 text-black">{tool.description}</p>
                 </div>
 
                 <div className="w-full max-w-xs shrink-0 rounded-2xl bg-gray-100 p-5">
                   <h3 className="text-xs font-bold uppercase tracking-[0.15em] text-black">
                     How it works
                   </h3>
-                  <ol className="mt-4 space-y-3 text-gray-900">
+                  <ol className="mt-4 space-y-3 text-black">
                     {tool.steps.map((step, index) => (
                       <li key={step} className="flex gap-3">
                         <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border text-xs font-medium">
@@ -103,7 +103,7 @@ export default async function ToolsPage() {
         </section>
 
         <section className="rounded-2xl border border-gray-300 bg-white p-6">
-          <p className="text-sm text-gray-900">
+          <p className="text-sm text-black">
             Need to connect a browser extension?{" "}
             <Link href="/access-key" className="font-medium text-black underline underline-offset-4">
               Get your access key

@@ -43,7 +43,7 @@ export default async function GroupsPage() {
               Community Subsystem
             </p>
             <h1 className="text-3xl font-semibold">Builders Atrium</h1>
-            <p className="leading-7 text-gray-900">
+            <p className="leading-7 text-black">
               A lightweight member-created groups subsystem. Members can form groups
               around shared interests, projects, focus, reading, or creative work.
               The website acts as a calm discovery and entry layer — not a social platform.
@@ -54,19 +54,19 @@ export default async function GroupsPage() {
         <section className="grid gap-6 md:grid-cols-3">
           <div className="rounded-2xl border border-gray-300 bg-white p-6">
             <h2 className="text-lg font-semibold">Member-Created</h2>
-            <p className="mt-3 leading-7 text-gray-900">
+            <p className="mt-3 leading-7 text-black">
               Groups are created by members, not centrally managed.
             </p>
           </div>
           <div className="rounded-2xl border border-gray-300 bg-white p-6">
             <h2 className="text-lg font-semibold">Lightweight by Design</h2>
-            <p className="mt-3 leading-7 text-gray-900">
+            <p className="mt-3 leading-7 text-black">
               Connection and direction — not another platform competing for attention.
             </p>
           </div>
           <div className="rounded-2xl border border-gray-300 bg-white p-6">
             <h2 className="text-lg font-semibold">Built for Shared Momentum</h2>
-            <p className="mt-3 leading-7 text-gray-900">
+            <p className="mt-3 leading-7 text-black">
               Groups form around focus, projects, writing, reading, or any shared aim.
             </p>
           </div>
@@ -74,7 +74,7 @@ export default async function GroupsPage() {
 
         <section className="rounded-2xl border border-gray-300 bg-white p-6">
           <h2 className="text-2xl font-semibold">Groups</h2>
-          <p className="mt-2 text-gray-900">
+          <p className="mt-2 text-black">
             Sample listings — full group creation and management coming later.
           </p>
 
@@ -88,14 +88,14 @@ export default async function GroupsPage() {
                   <div className="max-w-3xl space-y-3">
                     <div className="flex flex-wrap items-center gap-3">
                       <h3 className="text-xl font-semibold">{group.name}</h3>
-                      <span className="rounded-full border border-gray-300 px-3 py-1 text-xs font-medium text-gray-900">
+                      <span className="rounded-full border border-gray-300 px-3 py-1 text-xs font-medium text-black">
                         {group.focus}
                       </span>
-                      <span className="rounded-full border border-gray-300 px-3 py-1 text-xs font-medium text-gray-900">
+                      <span className="rounded-full border border-gray-300 px-3 py-1 text-xs font-medium text-black">
                         {group.status}
                       </span>
                     </div>
-                    <p className="leading-7 text-gray-900">{group.description}</p>
+                    <p className="leading-7 text-black">{group.description}</p>
                   </div>
 
                   <button

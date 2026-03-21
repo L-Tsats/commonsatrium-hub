@@ -10,7 +10,7 @@ export default function MembershipSuccessPage() {
 
         <h1 className="mt-3 text-3xl font-semibold">You&apos;re in.</h1>
 
-        <p className="mt-4 leading-7 text-gray-900">
+        <p className="mt-4 leading-7 text-black">
           Your membership is now active. The full member environment is unlocked.
         </p>
 

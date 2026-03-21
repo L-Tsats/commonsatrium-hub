@@ -12,7 +12,7 @@ export default async function VentPage() {
               Redirection Tool
             </p>
             <h1 className="text-3xl font-semibold">Vent</h1>
-            <p className="leading-7 text-gray-900">
+            <p className="leading-7 text-black">
               A minimal internal tool for moments of friction, distraction, or mental
               overload. Write briefly. Use it as a pause point, not a destination.
             </p>
@@ -21,7 +21,7 @@ export default async function VentPage() {
 
         <section className="rounded-2xl border border-gray-300 bg-white p-6">
           <h2 className="text-lg font-semibold">Write</h2>
-          <p className="mt-2 text-base text-gray-800">
+          <p className="mt-2 text-base text-black">
             Keep it brief. This is not a journal or a feed.
           </p>
 

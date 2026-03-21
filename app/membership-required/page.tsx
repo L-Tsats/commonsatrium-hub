@@ -13,7 +13,7 @@ export default function MembershipRequiredPage() {
             Active membership required
           </h1>
 
-          <p className="mt-4 leading-7 text-gray-900">
+          <p className="mt-4 leading-7 text-black">
             This area is available to active members only. Your account exists, but
             tool access, activation features, and member spaces are locked until
             membership is started or resumed.
@@ -28,7 +28,7 @@ export default function MembershipRequiredPage() {
             </Link>
             <Link
               href="/dashboard"
-              className="inline-flex rounded-xl border border-gray-300 px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-50"
+              className="inline-flex rounded-xl border border-gray-300 px-4 py-2 text-sm font-medium text-black hover:bg-gray-50"
             >
               Back to Dashboard
             </Link>
@@ -37,7 +37,7 @@ export default function MembershipRequiredPage() {
 
         <div className="rounded-2xl border border-gray-300 bg-gray-100 p-6">
           <h2 className="text-lg font-semibold">What membership unlocks</h2>
-          <ul className="mt-4 space-y-2 text-base text-gray-900">
+          <ul className="mt-4 space-y-2 text-base text-black">
             <li className="rounded-xl bg-white px-4 py-3">Tools and ecosystem access</li>
             <li className="rounded-xl bg-white px-4 py-3">Access key for browser extensions</li>
             <li className="rounded-xl bg-white px-4 py-3">Builders Atrium groups</li>

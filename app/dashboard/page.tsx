@@ -45,7 +45,7 @@ export default async function DashboardPage() {
               Control Center
             </p>
             <h1 className="text-3xl font-semibold">Dashboard</h1>
-            <p className="max-w-2xl leading-7 text-gray-900">
+            <p className="max-w-2xl leading-7 text-black">
               Operational hub for account access, tools, setup, announcements,
               Builders Atrium, and support surfaces.
             </p>
@@ -78,19 +78,19 @@ export default async function DashboardPage() {
               <div className="flex items-start justify-between gap-3">
                 <h2 className="text-lg font-semibold leading-snug">{tool.title}</h2>
                 {!isActiveMember && (
-                  <span className="shrink-0 rounded-full border border-gray-300 px-2.5 py-0.5 text-xs font-medium text-gray-800">
+                  <span className="shrink-0 rounded-full border border-gray-300 px-2.5 py-0.5 text-xs font-medium text-black">
                     Locked
                   </span>
                 )}
               </div>
-              <p className="mt-3 text-base leading-6 text-gray-900">{tool.description}</p>
+              <p className="mt-3 text-base leading-6 text-black">{tool.description}</p>
               <button
                 type="button"
                 disabled={!isActiveMember}
                 className={`mt-5 inline-flex rounded-xl px-4 py-2 text-sm font-medium ${
                   isActiveMember
                     ? "bg-black text-white hover:opacity-90"
-                    : "cursor-not-allowed border border-gray-300 bg-gray-100 text-gray-500"
+                    : "cursor-not-allowed border border-gray-300 bg-gray-100 text-black"
                 }`}
               >
                 {isActiveMember ? "Open Tool" : "Membership Required"}
@@ -103,18 +103,18 @@ export default async function DashboardPage() {
           <div className="rounded-2xl border border-gray-300 bg-white p-6">
             <div className="flex items-center justify-between">
               <h2 className="text-xl font-semibold">Access & Setup</h2>
-              <Link href="/access-key" className="text-sm font-medium text-gray-900 hover:text-black">
+              <Link href="/access-key" className="text-sm font-medium text-black hover:text-black">
                 Open Access Key
               </Link>
             </div>
-            <div className="mt-5 space-y-4 text-gray-900">
+            <div className="mt-5 space-y-4 text-black">
               <p>Browser tools and compatible devices connect through your account access flow.</p>
               {!isActiveMember ? (
-                <div className="rounded-xl border border-gray-300 bg-gray-100 p-4 text-gray-900">
+                <div className="rounded-xl border border-gray-300 bg-gray-100 p-4 text-black">
                   Access key generation is available only with an active membership.
                 </div>
               ) : (
-                <ol className="space-y-2 text-gray-900">
+                <ol className="space-y-2 text-black">
                   <li>1. Open your access key page</li>
                   <li>2. Copy your key</li>
                   <li>3. Paste it into the extension or tool setup flow</li>
@@ -126,13 +126,13 @@ export default async function DashboardPage() {
           <div className="rounded-2xl border border-gray-300 bg-white p-6">
             <div className="flex items-center justify-between">
               <h2 className="text-xl font-semibold">Announcements</h2>
-              <Link href="/announcements" className="text-sm font-medium text-gray-900 hover:text-black">
+              <Link href="/announcements" className="text-sm font-medium text-black hover:text-black">
                 View All
               </Link>
             </div>
             <ul className="mt-5 space-y-3">
               {announcements.map((item) => (
-                <li key={item} className="rounded-xl bg-gray-100 px-4 py-3 text-gray-800">
+                <li key={item} className="rounded-xl bg-gray-100 px-4 py-3 text-black">
                   {item}
                 </li>
               ))}
@@ -144,7 +144,7 @@ export default async function DashboardPage() {
           <div className="rounded-2xl border border-gray-300 bg-white p-6">
             <div className="flex items-center justify-between">
               <h2 className="text-xl font-semibold">Builders Atrium</h2>
-              <Link href="/groups" className="text-sm font-medium text-gray-900 hover:text-black">
+              <Link href="/groups" className="text-sm font-medium text-black hover:text-black">
                 Browse Groups
               </Link>
             </div>
@@ -152,7 +152,7 @@ export default async function DashboardPage() {
               {groups.map((group) => (
                 <div key={group.name} className="rounded-xl bg-gray-100 p-4">
                   <h3 className="font-medium">{group.name}</h3>
-                  <p className="mt-2 leading-7 text-gray-900">{group.description}</p>
+                  <p className="mt-2 leading-7 text-black">{group.description}</p>
                 </div>
               ))}
             </div>
@@ -161,11 +161,11 @@ export default async function DashboardPage() {
           <div className="rounded-2xl border border-gray-300 bg-white p-6">
             <div className="flex items-center justify-between">
               <h2 className="text-xl font-semibold">Redirection Tool</h2>
-              <Link href="/vent" className="text-sm font-medium text-gray-900 hover:text-black">
+              <Link href="/vent" className="text-sm font-medium text-black hover:text-black">
                 Open
               </Link>
             </div>
-            <div className="mt-5 space-y-4 text-gray-900">
+            <div className="mt-5 space-y-4 text-black">
               <p>A minimal support surface for moments of friction, distraction, or overload.</p>
               <Link
                 href="/vent"

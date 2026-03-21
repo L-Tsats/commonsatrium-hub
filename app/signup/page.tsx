@@ -62,7 +62,7 @@ export default function SignupPage() {
               New Member
             </p>
             <h1 className="text-3xl font-semibold">Create your account and Continue</h1>
-            <p className="leading-7 text-gray-900">
+            <p className="leading-7 text-black">
               Start your membership setup and get access to the control center, tools,
               downloads, and the wider Commons Atrium ecosystem.
             </p>
@@ -70,7 +70,7 @@ export default function SignupPage() {
 
           <form onSubmit={handleSubmit} className="mt-8 space-y-5">
             <div className="space-y-2">
-              <label htmlFor="name" className="text-sm font-medium text-gray-800">
+              <label htmlFor="name" className="text-sm font-medium text-black">
                 Display Name
               </label>
               <input
@@ -85,7 +85,7 @@ export default function SignupPage() {
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="email" className="text-sm font-medium text-gray-800">
+              <label htmlFor="email" className="text-sm font-medium text-black">
                 Email
               </label>
               <input
@@ -100,7 +100,7 @@ export default function SignupPage() {
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="password" className="text-sm font-medium text-gray-800">
+              <label htmlFor="password" className="text-sm font-medium text-black">
                 Password
               </label>
               <input
@@ -129,7 +129,7 @@ export default function SignupPage() {
             </button>
           </form>
 
-          <div className="mt-6 flex flex-wrap gap-3 text-sm text-gray-900">
+          <div className="mt-6 flex flex-wrap gap-3 text-sm text-black">
             <span>Already have an account?</span>
             <Link href="/login" className="font-medium text-black underline underline-offset-4">
               Log in here
@@ -140,13 +140,13 @@ export default function SignupPage() {
         <aside className="rounded-2xl border border-gray-300 bg-gray-100 p-8">
           <div className="space-y-4">
             <h2 className="text-2xl font-semibold">What happens next</h2>
-            <p className="leading-7 text-gray-900">
+            <p className="leading-7 text-black">
               Account creation is part of the membership flow. Commons Atrium is not a
               free-access platform; membership unlocks the internal control environment
               and tool access.
             </p>
 
-            <ol className="space-y-3 pt-2 text-gray-900">
+            <ol className="space-y-3 pt-2 text-black">
               <li className="rounded-xl bg-white p-4">1. Enter your account details</li>
               <li className="rounded-xl bg-white p-4">2. Continue into membership setup</li>
               <li className="rounded-xl bg-white p-4">3. Unlock the member environment</li>

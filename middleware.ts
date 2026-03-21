@@ -9,8 +9,11 @@ const protectedRoutes = [
   "/announcements",
   "/groups",
   "/vent",
-  "/membership",
+  "/start-membership",
 ];
+
+// Routes that should bypass protection (e.g. Stripe redirect landing)
+const publicExceptions = ["/membership/success"];
 
 // Routes that logged-in users should not see (redirect to dashboard)
 const authRoutes = ["/login", "/signup"];
@@ -19,6 +22,9 @@ export const middleware = auth((req) => {
   const { nextUrl, auth: session } = req;
   const isLoggedIn = !!session?.user;
   const path = nextUrl.pathname;
+
+  const isException = publicExceptions.some((route) => path.startsWith(route));
+  if (isException) return NextResponse.next();
 
   const isProtected = protectedRoutes.some((route) => path.startsWith(route));
   const isAuthRoute = authRoutes.some((route) => path.startsWith(route));

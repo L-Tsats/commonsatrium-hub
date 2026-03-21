@@ -18,7 +18,7 @@ export default async function StartMembershipPage() {
             Membership
           </p>
           <h1 className="mt-3 text-3xl font-semibold">Membership is active</h1>
-          <p className="mt-4 leading-7 text-gray-900">
+          <p className="mt-4 leading-7 text-black">
             Your membership is already active. No action needed.
           </p>
           <div className="mt-6">
@@ -43,7 +43,7 @@ export default async function StartMembershipPage() {
               Membership
             </p>
             <h1 className="text-3xl font-semibold">Start your membership</h1>
-            <p className="leading-7 text-gray-900">
+            <p className="leading-7 text-black">
               Commons Atrium is a member-only ecosystem. Membership gives access to
               the control center, internal pages, account-linked tools, and the broader
               member environment.
@@ -54,7 +54,7 @@ export default async function StartMembershipPage() {
         <section className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="rounded-2xl border border-gray-300 bg-white p-6">
             <h2 className="text-2xl font-semibold">What membership includes</h2>
-            <div className="mt-5 space-y-3 text-gray-900">
+            <div className="mt-5 space-y-3 text-black">
               <div className="rounded-xl bg-gray-100 p-4">Access to the member dashboard and control center</div>
               <div className="rounded-xl bg-gray-100 p-4">Access to ecosystem tools and setup flows</div>
               <div className="rounded-xl bg-gray-100 p-4">Access to announcements and Builders Atrium</div>
@@ -71,7 +71,7 @@ export default async function StartMembershipPage() {
               <p className="mt-3 text-3xl font-semibold">
                 {process.env.NEXT_PUBLIC_MEMBERSHIP_PRICE ?? "—"}
               </p>
-              <p className="mt-3 leading-7 text-gray-900">
+              <p className="mt-3 leading-7 text-black">
                 Billed monthly. Cancel anytime.
               </p>
               <CheckoutButton />

@@ -48,7 +48,7 @@ export default function LoginPage() {
               Member Access
             </p>
             <h1 className="text-3xl font-semibold">Log in to Commons Atrium</h1>
-            <p className="leading-7 text-gray-900">
+            <p className="leading-7 text-black">
               Access the control center, your tools, announcements, Builders Atrium,
               and the rest of your member environment from here.
             </p>
@@ -56,7 +56,7 @@ export default function LoginPage() {
 
           <form onSubmit={handleSubmit} className="mt-8 space-y-5">
             <div className="space-y-2">
-              <label htmlFor="email" className="text-sm font-medium text-gray-800">
+              <label htmlFor="email" className="text-sm font-medium text-black">
                 Email
               </label>
               <input
@@ -71,7 +71,7 @@ export default function LoginPage() {
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="password" className="text-sm font-medium text-gray-800">
+              <label htmlFor="password" className="text-sm font-medium text-black">
                 Password
               </label>
               <input
@@ -100,7 +100,7 @@ export default function LoginPage() {
             </button>
           </form>
 
-          <div className="mt-6 flex flex-wrap gap-3 text-sm text-gray-900">
+          <div className="mt-6 flex flex-wrap gap-3 text-sm text-black">
             <span>Don&apos;t have an account yet?</span>
             <Link href="/signup" className="font-medium text-black underline underline-offset-4">
               Create one here
@@ -111,19 +111,19 @@ export default function LoginPage() {
         <aside className="rounded-2xl border border-gray-300 bg-gray-100 p-8">
           <div className="space-y-4">
             <h2 className="text-2xl font-semibold">Why login is required</h2>
-            <p className="leading-7 text-gray-900">
+            <p className="leading-7 text-black">
               Commons Atrium is a member-based ecosystem. The website acts as the
               account layer, control center, and access hub for the broader product.
             </p>
 
             <div className="space-y-3 pt-2">
-              <div className="rounded-xl bg-white px-4 py-3 text-sm text-gray-800">
+              <div className="rounded-xl bg-white px-4 py-3 text-sm text-black">
                 Access your dashboard and internal pages
               </div>
-              <div className="rounded-xl bg-white px-4 py-3 text-sm text-gray-800">
+              <div className="rounded-xl bg-white px-4 py-3 text-sm text-black">
                 Connect paid tools through your account
               </div>
-              <div className="rounded-xl bg-white px-4 py-3 text-sm text-gray-800">
+              <div className="rounded-xl bg-white px-4 py-3 text-sm text-black">
                 Reach announcements, Builders Atrium, and support tools
               </div>
             </div>

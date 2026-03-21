@@ -38,7 +38,7 @@ export default async function AnnouncementsPage() {
               Member Updates
             </p>
             <h1 className="text-3xl font-semibold">Announcements</h1>
-            <p className="leading-7 text-gray-900">
+            <p className="leading-7 text-black">
               A simple internal feed for product updates, new tools, events, and
               important ecosystem changes for members.
             </p>
@@ -52,14 +52,14 @@ export default async function AnnouncementsPage() {
               className="rounded-2xl border border-gray-300 bg-white p-6"
             >
               <div className="flex flex-wrap items-center gap-3">
-                <span className="rounded-full border border-gray-300 px-3 py-1 text-xs font-medium text-gray-900">
+                <span className="rounded-full border border-gray-300 px-3 py-1 text-xs font-medium text-black">
                   {item.category}
                 </span>
-                <span className="text-sm text-gray-900">{item.date}</span>
+                <span className="text-sm text-black">{item.date}</span>
               </div>
 
               <h2 className="mt-4 text-2xl font-semibold">{item.title}</h2>
-              <p className="mt-3 leading-7 text-gray-900">{item.body}</p>
+              <p className="mt-3 leading-7 text-black">{item.body}</p>
             </article>
           ))}
         </section>
