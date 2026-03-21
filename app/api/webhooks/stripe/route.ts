@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { stripe } from "@/lib/stripe";
+import { getStripe } from "@/lib/stripe";
 import { prisma } from "@/lib/prisma";
 import { activateMembership, cancelMembership } from "@/lib/activate-membership";
 import Stripe from "stripe";
@@ -13,6 +13,8 @@ export async function POST(req: NextRequest) {
   if (!sig) {
     return NextResponse.json({ error: "Missing stripe-signature" }, { status: 400 });
   }
+
+  const stripe = getStripe();
 
   let event: Stripe.Event;
 

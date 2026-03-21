@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { getCurrentSessionUser } from "@/lib/session";
 import { prisma } from "@/lib/prisma";
-import { stripe } from "@/lib/stripe";
+import { getStripe } from "@/lib/stripe";
 
 export async function POST() {
   const sessionUser = await getCurrentSessionUser();
@@ -29,6 +29,8 @@ export async function POST() {
   if (user.membership?.status === "active") {
     return NextResponse.json({ error: "Membership already active" }, { status: 400 });
   }
+
+  const stripe = getStripe();
 
   // Ensure Stripe customer exists
   let stripeCustomerId = user.membership?.stripeCustomerId ?? null;
