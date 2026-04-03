@@ -6,6 +6,9 @@ export async function GET() {
   // 1. Check env vars
   checks.DATABASE_URL = process.env.DATABASE_URL ? "set" : "MISSING";
   checks.AUTH_SECRET = process.env.AUTH_SECRET ? "set" : "MISSING";
+  checks.STRIPE_WEBHOOK_SECRET = process.env.STRIPE_WEBHOOK_SECRET ? "set" : "MISSING";
+  checks.STRIPE_PRICE_ID = process.env.STRIPE_PRICE_ID ? "set" : "MISSING";
+  checks.NEXT_PUBLIC_BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? "MISSING";
   checks.NEXTAUTH_SECRET = process.env.NEXTAUTH_SECRET ? "set" : "MISSING";
   checks.NEXTAUTH_URL = process.env.NEXTAUTH_URL ? "set" : "MISSING";
 
