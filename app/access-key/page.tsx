@@ -1,5 +1,6 @@
 import { requireActiveMembership } from "@/lib/require-active-membership";
 import { getOrCreateCurrentAccessKey } from "@/lib/access-key";
+import CopyButton from "./CopyButton";
 
 export default async function AccessKeyPage() {
   await requireActiveMembership();
@@ -21,6 +22,7 @@ export default async function AccessKeyPage() {
             <div className="mt-4 rounded-xl bg-gray-50 p-5">
               <p className="text-xs font-bold uppercase tracking-[0.15em] text-black">Key</p>
               <p className="mt-3 break-all font-mono text-base text-black">{accessKey.key}</p>
+              <CopyButton text={accessKey.key} />
             </div>
             <div className="mt-4 rounded-xl border p-4">
               <p className="text-sm font-medium text-black">Status</p>
