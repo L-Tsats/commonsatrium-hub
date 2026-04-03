@@ -40,4 +40,5 @@ body {
 
 .page-card {
   animation: fadeIn 0.4s ease-out both;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
