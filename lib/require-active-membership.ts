@@ -2,7 +2,11 @@ import { redirect } from "next/navigation";
 import { getCurrentMembershipState } from "@/lib/membership";
 
 export async function requireActiveMembership() {
-  const { isActiveMember } = await getCurrentMembershipState();
+  const { user, isActiveMember } = await getCurrentMembershipState();
+
+  if (!user) {
+    redirect("/login");
+  }
 
   if (!isActiveMember) {
     redirect("/membership-required");
